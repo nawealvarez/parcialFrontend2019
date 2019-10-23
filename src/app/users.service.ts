@@ -29,4 +29,12 @@ export class UsersService {
   ];
   public readonly roles = ['admin', 'schedule', 'read', 'write'];
   constructor() { }
+
+  remove(index) {
+    this.users.splice(index, 1);
+  }
+
+  removeAll() {
+    this.users = [];
+  }
 }

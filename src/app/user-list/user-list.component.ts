@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { UsersService } from '../users.service';
 
 @Component({
   selector: 'app-user-list',
@@ -24,9 +25,17 @@ export class UserListComponent implements OnInit {
       roles: [ 'read']
     }
   ];
-  constructor() { }
+  constructor(private usersService: UsersService) {   }
 
   ngOnInit() {
+  }
+
+  remove(index) {
+    this.usersService.remove(index);
+  }
+
+  removeAll() {
+    this.usersService.removeAll();
   }
 
 }
