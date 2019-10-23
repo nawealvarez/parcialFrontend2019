@@ -9,8 +9,7 @@ import { UsersService } from '../users.service';
   styleUrls: ['./user-list.component.css']
 })
 export class UserListComponent implements OnInit {
-  
-  public usuarios = 
+   
  
   public users = [
     {
