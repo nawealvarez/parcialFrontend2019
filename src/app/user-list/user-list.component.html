@@ -3,7 +3,7 @@
   <button class="btn btn-danger mx-2" ng-click="removeAll()"> Eliminar Todos</button>
 </div>
 
-<div *ngFor="let user of users, let i = index" [attr.data-index]="i">
+<div *ngFor="let user of users; let i = index" [attr.data-index]="i">
   <div class="card m-3" >
     <div class="card-body">
       <h5 class="card-title">{{user.name}}</h5>
