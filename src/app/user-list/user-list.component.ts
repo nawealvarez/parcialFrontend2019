@@ -1,7 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormBuilder, Validators } from '@angular/forms';
-import { Router } from '@angular/router';
-import { UsersService } from '../users.service';
 
 @Component({
   selector: 'app-user-list',
@@ -28,7 +25,7 @@ export class UserListComponent implements OnInit {
       roles: [ 'read']
     }
   ];
-  constructor(private usersService: UsersService) { }
+  constructor() { }
 
   ngOnInit() {
   }
