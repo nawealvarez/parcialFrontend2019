@@ -31,6 +31,10 @@ export class UsersService {
   constructor() { }
 
   getUsers(){
-    return this.users
+    return this.users;
+  }
+  addUser(user) {
+    this.users.push(user)
+    return true
   }
 }
