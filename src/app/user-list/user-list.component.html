@@ -1,14 +1,14 @@
 <div class="p-3">
   <a routerLink="/form" class="btn btn-primary ">Agregar</a>
-  <a href="javascript:void(0)" class="btn btn-danger mx-2">Eliminar Todos</a>
+  <button (click)="removeAll($event)" class="btn btn-danger mx-2" > Eliminar Todos</button>
 </div>
 
-<div *ngFor="let user of users">
+<div *ngFor="let user of users; let i = index">
   <div class="card m-3" >
     <div class="card-body">
       <h5 class="card-title">{{user.name}}</h5>
       <p>roles</p>
       <a href="javascript:void(0)" class="btn btn-primary ">Editar</a>
-      <a href="javascript:void(0)" class="btn btn-danger mx-2">Eliminar</a>
+      <button class="btn btn-danger mx-2" (click)="remove(i)"> Eliminar</button>
     </div>
   </div></div>

@@ -15,4 +15,13 @@ export class UserListComponent implements OnInit {
     this.users = this.userService.getUsers();
   }
 
+  remove(index) {
+    this.userService.remove(index);
+  }
+
+  removeAll() {
+    console.log("Hello, there")
+    this.userService.removeAll();
+  }
+
 }

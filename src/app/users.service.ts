@@ -37,4 +37,11 @@ export class UsersService {
     this.users.push(user)
     return true
   }
+  remove(index) {
+    this.users.splice(index, 1);
+  }
+
+  public removeAll() {
+    this.users.splice(0, this.users.length);
+  }
 }
