@@ -28,5 +28,10 @@ export class UsersService {
     }
   ];
   public readonly roles = ['admin', 'schedule', 'read', 'write'];
-  constructor() { }
+  constructor() {}
+
+  addUser(user) {
+    this.users.push(user)
+    return true
+  }
 }
