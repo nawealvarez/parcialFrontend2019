@@ -10,25 +10,10 @@ import { UsersService } from '../users.service';
 })
 export class UserListComponent implements OnInit {
   
-  public usuarios = 
+  public users = this.usersService.;
  
-  public users = [
-    {
-      name: 'Andres',
-      email: 'andres@hotmail.com',
-      roles: ['admin']
-    },
-    {
-      name: 'Pepe',
-      email: 'pepe@hotmail.com',
-      roles: [ 'write', 'read']
-    },
-    {
-      name: 'Nico',
-      email: 'nico@gmail.com',
-      roles: [ 'read']
-    }
-  ];
+  //public users = [ this.usersService.users];
+
   constructor(private usersService: UsersService) { }
 
   ngOnInit() {

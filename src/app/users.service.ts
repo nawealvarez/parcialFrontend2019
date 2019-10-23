@@ -1,11 +1,15 @@
 import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root'
 })
 export class UsersService {
-
-  public users = [
+  getUsers() {
+    return this.users;
+  } 
+  
+   public users = [
     {
       name: 'Andres',
       email: 'andres@hotmail.com',
@@ -28,5 +32,5 @@ export class UsersService {
     }
   ];
   public readonly roles = ['admin', 'schedule', 'read', 'write'];
-  constructor() { }
+  constructor(private http: HttpClient) { }
 }
